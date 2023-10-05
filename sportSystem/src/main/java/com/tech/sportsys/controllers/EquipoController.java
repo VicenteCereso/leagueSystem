@@ -48,7 +48,7 @@ public class EquipoController {
 		try {
 			equipo = equipoService.consultarEquipoById(id);
 			if(equipo==null || equipo.isEmpty()) {
-				throw new ResourceNotFoundException("user", "Id",id);
+				throw new ResourceNotFoundException("equipo", "Id",id);
 			}
 		}catch (DataAccessException e) {
 			throw new BadRequestException(e.getMessage());
